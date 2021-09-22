@@ -35,9 +35,9 @@ export class SignupComponent implements OnInit {
     }
     let data = { 
       fullName: this.registerForm.value.nameFull,
-      userEmail: this.registerForm.value.email,
+      email: this.registerForm.value.email,
       password: this.registerForm.value.password,
-      phoneNumber: this.registerForm.value.mobileNo,
+      mobileNumber: this.registerForm.value.mobileNo,
     }
     this.service.signUpUser(data).subscribe((response:any) =>{ 
       console.log(response);

@@ -47,8 +47,8 @@ export class LoginComponent implements OnInit {
     }
 
   let requestData = {
-    userEmail: this.loginForm.value.email,
-    Password: this.loginForm.value.password
+    email: this.loginForm.value.email,
+    password: this.loginForm.value.password
   }
  
   this.user.loginUser(requestData).subscribe(
@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
       console.log(requestData);
       localStorage.setItem('Token', response['token']);
       this.openSnackBar('Login success', 2000);
-      this.router.navigate(['dashboard/books']);
+      this.router.navigate(['dashboard']);
       console.log(response);
   })    
   }

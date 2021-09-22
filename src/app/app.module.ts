@@ -17,13 +17,17 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+import { GetbooksComponent } from './getbooks/getbooks/getbooks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
+    DashboardComponent,
+    GetbooksComponent
   ],
   imports: [
     BrowserModule,

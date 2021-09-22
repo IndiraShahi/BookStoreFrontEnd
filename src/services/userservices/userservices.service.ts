@@ -14,6 +14,6 @@ export class UserservicesService {
    //login user  http service
    signUpUser(data: any) {
     //console.log("given data is", data)
-    return this.http.SignUpUser('User', data);
+    return this.http.SignUpUser('User/Register', data);
   }
 }

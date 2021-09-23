@@ -19,6 +19,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { GetbooksComponent } from './getbooks/getbooks/getbooks.component';
+import { DialogboxComponent } from './dialogbox/dialogbox/dialogbox.component';
+import { CartComponent } from './cart/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { GetbooksComponent } from './getbooks/getbooks/getbooks.component';
     LoginComponent,
     LoginSignupComponent,
     DashboardComponent,
-    GetbooksComponent
+    GetbooksComponent,
+    DialogboxComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

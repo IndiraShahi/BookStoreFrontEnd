@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
       console.log(requestData);
       localStorage.setItem('Token', response['token']);
       this.openSnackBar('Login success', 2000);
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['dashboard/books']);
       console.log(response);
   })    
   }

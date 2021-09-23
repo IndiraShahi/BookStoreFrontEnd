@@ -25,9 +25,9 @@ export class DashboardComponent implements OnInit {
     localStorage.clear();
     this.route.navigate(['login']);
   }
-  Login(){
-    this.route.navigate(['login']);
-  }
+  // Login(){
+  //   this.route.navigate(['login']);
+  // }
   showCart(){
     this.route.navigate(['dashboard/cart']);
   }

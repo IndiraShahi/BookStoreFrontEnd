@@ -23,7 +23,7 @@ export class GetbooksComponent implements OnInit {
   getBooks() {
     this.service.getallBook('Books').subscribe((response: any) => {
       console.log(response);
-      this.booksArray = response.result;
+      this.booksArray = response.data;
       // this.booksArray.reverse();
       console.log(this.booksArray);
 

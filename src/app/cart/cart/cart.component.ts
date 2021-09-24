@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartservicesService } from 'src/services/cartservices/cartservices.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  quantity:number=1;
+  getBook:any
+  card:any
+  constructor(private cart: CartservicesService) { }
 
   ngOnInit(): void {
+    this.getCarts();
+  }
+  getCarts() {
+    throw new Error('Method not implemented.');
   }
 
 }

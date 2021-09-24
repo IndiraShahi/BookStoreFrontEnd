@@ -12,8 +12,8 @@ import { LoginSignupComponent } from './login-signup/login-signup/login-signup.c
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ReactiveFormsModule ,  FormsModule} from '@angular/forms';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
@@ -21,6 +21,9 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { GetbooksComponent } from './getbooks/getbooks/getbooks.component';
 import { DialogboxComponent } from './dialogbox/dialogbox/dialogbox.component';
 import { CartComponent } from './cart/cart/cart.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword/forgetpassword.component';
+import { AuthguardService } from 'src/services/authguard/authguard.service';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { CartComponent } from './cart/cart/cart.component';
     DashboardComponent,
     GetbooksComponent,
     DialogboxComponent,
-    CartComponent
+    CartComponent,
+    ForgetpasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -47,9 +51,13 @@ import { CartComponent } from './cart/cart/cart.component';
     MatButtonModule,
     ScrollingModule,
     FlexLayoutModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    MatToolbarModule
   ],
-  providers: [],
+  providers: [
+    AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

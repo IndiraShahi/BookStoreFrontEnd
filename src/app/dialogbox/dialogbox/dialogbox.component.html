@@ -1,7 +1,7 @@
 <div class="container">
     <div class="book-image-container">
       <div class="book-image">
-        <img width="150" class="center" height="150" src={{data.bookImage}} alt="">
+        <img width="150" class="center" height="150" src={{data.image}} alt="">
       </div>
       <div class="action-buttons">
         <button mat-stroked-button class="add-to-bag" click=addToCart();>ADD TO BAG</button>
@@ -14,7 +14,7 @@
     <div class="book-details-container">
       <div class="book-description">
         <h2>{{data.bookName}}</h2>
-        <p>by {{data.authorName}}</p>
+        <p>by {{data.author}}</p>
         <div class="rating-container" fxLayout="row">
           <div class="rating" fxLayout="row" fxLayoutAlign="center center">
             <span>4</span> 

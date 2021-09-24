@@ -12,7 +12,7 @@ export class CartservicesService {
     console.log("given data is", url);
     return this.http.getCarts(url);
   }
-  addToCart(data:any){
+  ToCart(data:any){
     return this.http.addToCart("Cart", data);
   }
 }

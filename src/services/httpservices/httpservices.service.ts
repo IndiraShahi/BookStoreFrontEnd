@@ -10,6 +10,11 @@ export class HttpservicesService {
   https = new HttpHeaders();
 
   constructor(private http: HttpClient) { }
+
+  Post(url: any, data: any, token: any, headers: boolean)
+  {
+    return this.http.post(this.BaseUrl + url, data);
+  }
   loginUser(url: any, data: any) {
 
     return this.http.post(this.BaseUrl + url, data);

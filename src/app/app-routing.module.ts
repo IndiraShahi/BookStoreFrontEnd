@@ -6,6 +6,7 @@ import { LoginSignupComponent } from './login-signup/login-signup/login-signup.c
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { GetbooksComponent } from './getbooks/getbooks/getbooks.component';
 import { CartComponent } from './cart/cart/cart.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword/forgetpassword.component';
 
 const routes: Routes = [
   {path: '',component: LoginSignupComponent,
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'register', component: SignupComponent },
     { path: 'login', component: LoginComponent }
   ],},
+  { path: 'forget-password', component: ForgetpasswordComponent },
   {path: 'dashboard', component:DashboardComponent,
   children: [
     { path: 'books', component: GetbooksComponent },

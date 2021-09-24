@@ -15,5 +15,10 @@ export class UserservicesService {
    signUpUser(data: any) {
     //console.log("given data is", data)
     return this.http.SignUpUser('User/Register', data);
+   }
+   forget(data: any)
+   {
+     return this.http.Post("User/forgetpassword", data, null, false);
+   }
   }
-}
+

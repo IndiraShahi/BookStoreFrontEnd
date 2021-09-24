@@ -12,7 +12,7 @@ export class GetbooksComponent implements OnInit {
 
   BookQuanity: number = 0;
   booksArray: any;
-  @Input() card: any
+  @Input() card: any;
   constructor(private service: BookservicesService, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -37,6 +37,6 @@ export class GetbooksComponent implements OnInit {
       data: card
 
     });
-    console.log(card)
+    console.log(card);
   }
 }

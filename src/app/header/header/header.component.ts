@@ -2,22 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
   profileDialogShown:boolean = false;
   userSignedOff:boolean = true;
-
 
   constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
- 
-    
   profileDialogShownToggle(){
     this.profileDialogShown = ! this.profileDialogShown;
   }
@@ -32,6 +29,8 @@ export class DashboardComponent implements OnInit {
     this.route.navigate(['dashboard/cart']);
   }
   getwishlist(){
-    this.route.navigate(['dashboard/wishlist']);
+    this.route.navigate(['dashboard/wishlist'])
   }
+
 }
+

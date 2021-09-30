@@ -19,11 +19,16 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { GetbooksComponent } from './getbooks/getbooks/getbooks.component';
-import { DialogboxComponent } from './dialogbox/dialogbox/dialogbox.component';
 import { CartComponent } from './cart/cart/cart.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword/forgetpassword.component';
 import { AuthguardService } from 'src/services/authguard/authguard.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { BookDetailsComponent } from './book-details/book-details/book-details.component';
+import { WishlistComponent } from './wishlist/wishlist/wishlist.component';
+import { OrderComponent } from './order/order/order.component';
+import { HeaderComponent } from './header/header/header.component';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [
@@ -33,9 +38,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     LoginSignupComponent,
     DashboardComponent,
     GetbooksComponent,
-    DialogboxComponent,
     CartComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    BookDetailsComponent,
+    WishlistComponent,
+    OrderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +61,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     FlexLayoutModule,
     MatDialogModule,
     FormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatRadioModule
   ],
   providers: [
     AuthguardService

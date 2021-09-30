@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { BookservicesService } from 'src/services/bookservices/bookservices.service';
-import { DialogboxComponent } from 'src/app/dialogbox/dialogbox/dialogbox.component';
-import { MatDialog } from '@angular/material/dialog';
+import { DataService } from 'src/services/data.service';
+
 @Component({
   selector: 'app-getbooks',
   templateUrl: './getbooks.component.html',
@@ -10,33 +11,31 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class GetbooksComponent implements OnInit {
 
+ 
   BookQuanity: number = 0;
   booksArray: any;
   @Input() card: any;
-  constructor(private service: BookservicesService, private router: Router, public dialog: MatDialog) { }
+  id: any;
+
+  constructor(private bookservice: BookservicesService,
+     private router: Router,
+     public dialog: MatDialog,
+     private dataService : DataService) { }
 
   ngOnInit(): void {
     this.getBooks();
   }
-
-
   getBooks() {
-    this.service.getallBook('Books').subscribe((response: any) => {
+    this.bookservice.getallBook('Books').subscribe((response: any) => {
       console.log(response);
       this.booksArray = response.data;
       // this.booksArray.reverse();
       console.log(this.booksArray);
-
     });
   }
-
-  openDialog(card: any) {
-    let diaLogRef = this.dialog.open(DialogboxComponent, {
-      width: "700px",
-      maxWidth: "auto",
-      data: card
-
-    });
-    console.log(card);
+  toBookDetails( book : any)
+  {
+    this.dataService.sendBooks(book);
+    this.router.navigateByUrl("bookdetails");
   }
 }
